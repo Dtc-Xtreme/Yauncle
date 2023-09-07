@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model FormViewModel
+
+<div class="text-center">
+    <h1 class="display-4">Post parameters to external API</h1>
+    <form asp-action="Index" method="post">
+        <div class="form-group">
+            <label asp-for="Parameters">Parameters:</label>
+            <textarea asp-for="Parameters" class="form-control"></textarea>
+            <span asp-validation-for="Parameters" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
